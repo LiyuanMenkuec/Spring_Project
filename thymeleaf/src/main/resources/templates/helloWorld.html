@@ -10,17 +10,23 @@
 </head>
 
 <body>
+<div class="container">
+<div class="row justify-content-center">
 	Hello World!!
 	<br><br>
 	
 	Student name: <span th:text="${param.studentName}" />
 
 
-
+	<br><br>
+	
+	I want to tell you: <span th:text="${message}" />
 
 	<!--  
 	<p th:text="'Time on the server is' + ${theDate}" class="font-weight-bold">
 	-->
+</div>
+</div>
 </body>
 
 
