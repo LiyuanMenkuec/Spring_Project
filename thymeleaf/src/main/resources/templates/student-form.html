@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Student Registration Form</title>
+</head>
+
+<body>
+<h2>Student Registration Form</h2>
+
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
+	First name: <input type="text" th:field="*{firstName}" />
+	<br><br>
+	Last name: <input type="text" th:field="*{lastName}"/>
+	<br><br>
+	<input type="submit" value="Submit" />
+	
+
+</form>
+
+<p>*{firstName} is same as {student.firstName}</p>
+
+<h2>Steps for Data-Binding in text Fields</h2>
+
+<ol>
+  <li>Create Student Class</li>
+  <li>Create StudentController Class</li>
+  <li>Create HTML form</li>
+  <li>Create form processing code in StudentController with new method "processStudentForm()"</li>
+  <li>Create confirmation page</li>
+</ol> 
+
+
+</body>
+
+
+
+
+</html>
